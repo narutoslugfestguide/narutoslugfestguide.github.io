@@ -32,7 +32,7 @@ header {
 nav {
   float: right;
   width: 20%;
-  height: auto; /* only for demonstration, should be removed */
+  height: 100%; /* only for demonstration, should be removed */
   background: #ccc;
   padding: 20px;
 }
