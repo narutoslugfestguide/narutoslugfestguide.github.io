@@ -32,7 +32,7 @@ header {
 nav {
   float: right;
   width: 20%;
-  /* only for demonstration, should be removed */
+  height: auto; /* only for demonstration, should be removed */
   background: #ccc;
   padding: 20px;
 }
@@ -107,7 +107,7 @@ article {
   padding: 20px;
   width: 80%;
   background-color: #f1f1f1;
- /* only for demonstration, should be removed */
+  /* height: auto; only for demonstration, should be removed */
 }
 
 /* Clear floats after the columns */
@@ -129,6 +129,6 @@ footer {
 @media (max-width: 600px) {
   nav, article {
     width: 100%;
-    
+    /* height: auto; only for demonstration, should be removed */
   }
 }
