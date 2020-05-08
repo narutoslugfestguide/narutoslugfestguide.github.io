@@ -2,78 +2,63 @@
 <html>
 	<head>
 		<title>Naruto Slugfest Guide</title>
-		<link rel="stylesheet" type="text/css" href="/main.css">
+	<script>
+	function includeHTML() {
+	var z, i, elmnt, file, xhttp;
+	/*loop through a collection of all HTML elements:*/
+	z = document.getElementsByTagName("*");
+	for (i = 0; i < z.length; i++) {
+		elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      /*make an HTTP request using the attribute value as the file name:*/
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /*remove the attribute, and call this function once more:*/
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML();
+        }
+      }      
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /*exit the function:*/
+      return;
+    }
+	}
+	};
+	</script>
 	</head>
-	<body>
-
-<header>
-  <a href="narutoslugfestguide.html" style="color:">
-  <h2>Naruto Slugfest Guide</h2>
-  </a>
-</header>
-
-<div class="navbar";>
-
-  <div class="dropdown";>
-    <button class="dropbtn";><a href="#";> Bounty Handbook
-      <i class="fa fa-caret-down"></i>
-    </a></button>
-    <div class="dropdown-content">
-      <a href="#"> S Class </a>
-      <a href="#"> A Class </a>
-      <a href="#"> B Class </a>
-      <a href="#"> C Class </a>
-      <a href="#"> D Class </a>
-    </div>
-  </div> 
-
-  <div class="dropdown";>
-    <button class="dropbtn"><a href="#";> Boss Monsters
-      <i class="fa fa-caret-down"></i>
-    </a></button>
-    <div class="dropdown-content">
-      <a href="/landofriver.html"> Land of River </a>
-      <a href="/sunagakure.html"> Sunagakure </a>
-      <a href="/konohagakure.html"> Konohagakure </a>
-      <a href="/amegakure.html"> Amegakure </a>
-    </div>
-
-  </div> 
-  <div class="dropdown";>
-    <button class="dropbtn"><a href="#";> Big World Quests
-      <i class="fa fa-caret-down"></i>
-    </a></button>
-    <div class="dropdown-content">
-      <a href="#"> Red, Blue, Yellow Eggs </a>
-      <a href="#"> Help Trader </a>
-      <a href="#"> Strange Things by the River </a>
-    </div>
-  </div> 
-
-  </div> 
-</div>
-<section>
-  <nav>
+<body>
+	<div w3-include-html="/navbar.html"></div> 
+	<script>includeHTML();</script>
+	
+	<section>
+	
+	<nav>
     <ul>
-      <li><a href="#"> # </a></li>
-<br>
-      <li><a href="#"> # </a></li>
-<br>
-      <li><a href="#"> #</a></li>
-<br>
+    <li><a href="#"> # </a></li>
+	<br>
+    <li><a href="#"> # </a></li>
+	<br>
+    <li><a href="#"> #</a></li>
+	<br>
     </ul>
-  </nav>
+	</nav>
   
-  <article>
+	<article>
     <p>Various guides on Naruto Slugfest</p>
     <p></p>
+	</article>
+	
+	</section>
 
-  </article>
-</section>
-
-<footer>
-  <p>Footer</p>
-</footer>
+	<footer>
+	<p>Footer</p>
+	</footer>
 
 </body>
 </html>
