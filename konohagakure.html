@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+  <title>Konohagakure Boss Location</title>
+	<script>
+	function includeHTML() {
+	var z, i, elmnt, file, xhttp;
+	/*loop through a collection of all HTML elements:*/
+	z = document.getElementsByTagName("*");
+	for (i = 0; i < z.length; i++) {
+		elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      /*make an HTTP request using the attribute value as the file name:*/
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /*remove the attribute, and call this function once more:*/
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML();
+        }
+      }      
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /*exit the function:*/
+      return;
+    }
+	}
+	};
+	</script>
+</head>
+<body>
+	<div w3-include-html="/navbar.html"></div> 
+	<script>includeHTML();</script>
+
+	<section>
+	<div w3-include-html="/sidebar.html"></div>
+		<article>
+    <h2>Konohagakure</h2>
+    <a href="https://drive.google.com/uc?id=1SbFkNKdd4rda99s-fmEJZ36xLp_Iou4a" target="_blank" style="color:black">
+    <p><image src="https://drive.google.com/uc?id=1SbFkNKdd4rda99s-fmEJZ36xLp_Iou4a" width="640"; style="width:600px;height:500px;"></p>
+    </a>
+    <a href="https://drive.google.com/uc?id=1Ux7ue2fpuQ5WTtJZZwdnbedZbuu0h8Sv" target="_blank" style="color:black">
+    <p style="text-align:left"> (1) <b>Otogakure Spy Leader</b> (Level 45) </p>
+    <image src="https://drive.google.com/uc?id=1Ux7ue2fpuQ5WTtJZZwdnbedZbuu0h8Sv"; style="width:250px;height:250px;";>
+    </a>
+
+    <a href="https://drive.google.com/uc?id=1WUomvpff9bRCyvup8l7tdkIjc27j-9HW" target="_blank" style="color:black">
+    <p style="text-align:left"> (2) <b>Bounty Samurai Leader</b> (Level 50)</p>
+    <image src="https://drive.google.com/uc?id=1WUomvpff9bRCyvup8l7tdkIjc27j-9HW"; style="width:250px;height:250px;">
+    </a>
+
+    <a href="https://drive.google.com/uc?id=1gOjO8ebLnOQwJkF1HdA6kvv4BPCI0IM5" target="_blank" style="color:black">
+    <p style="text-align:left"> (3) <b>Fierce Wolf King</b> (Level 55)</p>
+    <image src="https://drive.google.com/uc?id=1gOjO8ebLnOQwJkF1HdA6kvv4BPCI0IM5"; style="width:250px;height:250px;">
+    </a>
+
+    <a href="https://drive.google.com/uc?id=1nmQ3D_gIOx03AdDm36Geow1bxBuJgdic" target="_blank" style="color:black">
+    <p style="text-align:left"> (4) <b> Furious Boar King </b> (Level 55)</p>
+    <image src="https://drive.google.com/uc?id=1nmQ3D_gIOx03AdDm36Geow1bxBuJgdic"; style="width:250px;height:250px;">
+    </a>
+		</article>
+	</section>
+
+<footer>
+  <p>Footer</p>
+</footer>
+
+</body>
+</html>
