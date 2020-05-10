@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+  <title>Red, Blue, Yellow Eggs</title>
+	<script>
+	function includeHTML() {
+	var z, i, elmnt, file, xhttp;
+	/*loop through a collection of all HTML elements:*/
+	z = document.getElementsByTagName("*");
+	for (i = 0; i < z.length; i++) {
+		elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      /*make an HTTP request using the attribute value as the file name:*/
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /*remove the attribute, and call this function once more:*/
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML();
+        }
+      }      
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /*exit the function:*/
+      return;
+    }
+	}
+	};
+	</script>
+</head>
+<body>
+	<div w3-include-html="/navbar.html"></div> 
+	<script>includeHTML();</script>
+
+	<section>
+	<div w3-include-html="/sidebar.html"></div>
+		<article>
+		<h2>Red, Blue, Yellow Eggs</h2>
+		<p><i>*not sure what they’re exactly called*</i><p>
+		<a href="https://drive.google.com/uc?id=1xNwei0P84ORyam1-__H5bcfc52-iFtHM" target="_blank">
+		<p><image src="https://drive.google.com/uc?id=1xNwei0P84ORyam1-__H5bcfc52-iFtHM"; style="width:600px;height:500px;"> Go to Konohagakure and proceed to the yellow location. </p></a>
+
+		<a href="https://drive.google.com/uc?id=1a_o1Ej_EkS5wg4GDPmiYUFJVK0clbKeQ" target="_blank" style="color:black">
+		<p style="text-align:left"> You’ll see 3 sets of of red, blue, and yellow eggs. </p>
+		<image src="https://drive.google.com/uc?id=1a_o1Ej_EkS5wg4GDPmiYUFJVK0clbKeQ"; style="width:250px;height:250px;";>
+		</a>
+
+		<a href="https://drive.google.com/uc?id=1B8spr3tPPItGb4bXcKqXzmr6ej_w8cTa" target="_blank" style="color:black">
+		<p style="text-align:left"> Set the eggs at the markings located near the area. </p>
+		<p><image src="https://drive.google.com/uc?id=1B8spr3tPPItGb4bXcKqXzmr6ej_w8cTa"; style="width:250px;height:250px;"></p></a>
+			
+		<a href="https://drive.google.com/uc?id=14PegDzCpl9UsZTfEiCEj6mOcLEFEqyxy" target="_blank" style="color:black">
+		<p style="text-align:left"> Once everything has been set in place, it’ll start raining Level 1 Magatamas. (Level 40)</p>
+		<p><image src="https://drive.google.com/uc?id=14PegDzCpl9UsZTfEiCEj6mOcLEFEqyxy"; style="width:250px;height:250px;"></p></a>
+		<ul> 
+		<li> Important notes:
+		<li> If you double the color of one egg, you’ll get Ramens instead of Magatamas (example: blue, blue, red = Ramen) </li>
+		<li> One set consumes 3 big world points </li>
+		<li> Eggs respawns 5 minutes after consumed </li>
+		</ul>
+		</article>
+	</section>
+
+<footer>
+  <p>Footer</p>
+</footer>
+
+</body>
+</html>
