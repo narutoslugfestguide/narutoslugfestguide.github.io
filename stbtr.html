@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+  <title>Strange Things by the River</title>
+	<script>
+	function includeHTML() {
+	var z, i, elmnt, file, xhttp;
+	/*loop through a collection of all HTML elements:*/
+	z = document.getElementsByTagName("*");
+	for (i = 0; i < z.length; i++) {
+		elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      /*make an HTTP request using the attribute value as the file name:*/
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /*remove the attribute, and call this function once more:*/
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML();
+        }
+      }      
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /*exit the function:*/
+      return;
+    }
+	}
+	};
+	</script>
+</head>
+<body>
+	<div w3-include-html="/navbar.html"></div> 
+	<script>includeHTML();</script>
+
+	<section>
+	<div w3-include-html="/sidebar.html"></div>
+		<article>
+		<h2>Strange Things by the River</h2>
+		<hr>
+		<p><b>Part 1: </b> Head to the Land of Rivers 0/1</p>
+		<p><b>Part 2: </b> Carry fish into the river 0/6</p>
+		<a href="https://drive.google.com/uc?id=11ShjCcr6oM6211g5VXoAhsHylwcPyN5N" target="_blank" style="color:black">
+		<image src=" https://drive.google.com/uc?id=11ShjCcr6oM6211g5VXoAhsHylwcPyN5N"; style="width:600px;height:250px;";>
+		</a>
+
+		<p><b>Part 1: Investigate the cause of the anomaly</b></p>
+		<p>You can press the quest and let the auto-navigate take you to the location. It is important that you let the auto-navigate finish.</p>
+		<a href="https://drive.google.com/uc?id=1ko_9JvMElI7gvLkEEi0ZuzSk_VYr-eNy" target="_blank" style="color:black">
+		<image src=" https://drive.google.com/uc?id=1ko_9JvMElI7gvLkEEi0ZuzSk_VYr-eNy"; style="width:600px;height:250px;";>
+		</a>
+
+		<p>You will know that the auto-navigate has finished when the quest has change from <b>“Head to the Land of Rivers 0/1”</b> to<b> “Carry fish into the river 1/6“.</b></p>
+		<a href="https://drive.google.com/uc?id=1kk_8hR2B82iiMd30d_aoQQtXftz7qXQ1" target="_blank" style="color:black">
+		<image src=" https://drive.google.com/uc?id=1kk_8hR2B82iiMd30d_aoQQtXftz7qXQ1"; style="width:600px;height:250px;";>
+		</a>
+
+		<p><br>Part 2: Carry fish into the river 1/6</b></p>
+		<p>You need to carry those fishes on the land into to the water holes. There are a total of 6 fishes that you can carry into any of the 3 water holes.</p>
+		<a href="https://drive.google.com/uc?id=1kX6CCuFEu_HilOP3CAdERhtswMcbXmSp" target="_blank" style="color:black">
+		<image src=" https://drive.google.com/uc?id=1kX6CCuFEu_HilOP3CAdERhtswMcbXmSp"; style="width:600px;height:250px;";>
+		</a>
+			
+		<p>You will need to drop the fishes into any of the water holes.</p>
+		<a href="https://drive.google.com/uc?id=1S-LvUNtLtRRZrQgVWNPXNX_rmAP-UMB-" target="_blank" style="color:black">
+		<image src=" https://drive.google.com/uc?id=1S-LvUNtLtRRZrQgVWNPXNX_rmAP-UMB-"; style="width:600px;height:250px;";>
+		</a>
+
+		<p>Do this for 6 times and you’ll finish your quest.</p><br>
+		<p><b>Bonus:</b>You’ll receive Ramen from completing the Big World quests</p>
+		<a href="https://drive.google.com/uc?id=1w9vJkrlB6Q_VQU5QDhVfqc7vbYwcRC62" target="_blank" style="color:black">
+		<image src=" https://drive.google.com/uc?id=1w9vJkrlB6Q_VQU5QDhVfqc7vbYwcRC62"; style="width:600px;height:250px;";>
+		</a>
+
+		</article>
+	</section>
+
+<footer>
+  <p>Footer</p>
+</footer>
+
+</body>
+</html>
