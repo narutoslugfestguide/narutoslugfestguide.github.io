@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+  <title>Sunagkure Boss Location</title>
+	<script>
+	function includeHTML() {
+	var z, i, elmnt, file, xhttp;
+	/*loop through a collection of all HTML elements:*/
+	z = document.getElementsByTagName("*");
+	for (i = 0; i < z.length; i++) {
+		elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      /*make an HTTP request using the attribute value as the file name:*/
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /*remove the attribute, and call this function once more:*/
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML();
+        }
+      }      
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /*exit the function:*/
+      return;
+    }
+	}
+	};
+	</script>
+</head>
+<body>
+	<div w3-include-html="/navbar.html"></div> 
+	<script>includeHTML();</script>
+
+	<section>
+	<div w3-include-html="/sidebar.html"></div>
+	<article>
+    <h2>Land of River</h2>
+    <a href="sunagakure_boss_loc.png" target="_blank">
+    <p><image src="sunagakure_boss_loc.png"; style="width:600px;height:500px;"></p></a>
+
+
+    <a href="blood_thirsty_hyena.jpg" target="_blank" style="color:black">
+    <p> (A) <b>Blood Thirsty Hyena</b> (Level 20) </p>
+    <image src="blood_thirsty_hyena.jpg"; style="width:250px;height:250px";>
+    </a>
+
+    <a href="rot_poison_sand_king.jpg" target="_blank" style="color:black">
+    <p> (B) <b>Rot Poison Sand King</b> (Level 25) </p>
+    <p><image src="rot_poison_sand_king.jpg"; style="width:250px;height:250px"></p>
+    </a>
+
+    <a href="sunagakure_rogue_leader.jpg" target="_blank" style="color:black">
+    <p> (B) <b>Sunagakure Rogue Leader</b> (Level 30)</p>
+    <p><image src="sunagakure_rogue_leader.jpg"; style="width:250px;height:250px"></p>
+    </a>
+
+	</article>
+	</section>
+
+<footer>
+  <p>Footer</p>
+</footer>
+
+</body>
+</html>
