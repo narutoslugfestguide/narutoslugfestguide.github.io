@@ -131,6 +131,9 @@ footer {
     width: 100%;
     /* height: auto; only for demonstration, should be removed */
   }
+  .column {
+    width: 100%;
+  }
 }
 /* Three image containers (use 25% for four, and 50% for two, etc) */
 .column {
@@ -144,10 +147,4 @@ footer {
   content: "";
   clear: both;
   display: table;
-}
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 500px) {
-  .column {
-    width: 100%;
-  }
 }
