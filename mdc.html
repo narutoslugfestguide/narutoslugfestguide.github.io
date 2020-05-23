@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+  <title>Making Delicious Curry</title>
+	<script>
+	function includeHTML() {
+	var z, i, elmnt, file, xhttp;
+	/*loop through a collection of all HTML elements:*/
+	z = document.getElementsByTagName("*");
+	for (i = 0; i < z.length; i++) {
+		elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      /*make an HTTP request using the attribute value as the file name:*/
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /*remove the attribute, and call this function once more:*/
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML();
+        }
+      }      
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /*exit the function:*/
+      return;
+    }
+	}
+	};
+	</script>
+</head>
+<body>
+	<div w3-include-html="/navbar.html"></div> 
+	<script>includeHTML();</script>
+		<h2>Making Delicious Curry</h2>
+<hr>
+	<a href="https://user-images.githubusercontent.com/64807615/82740791-9d605e00-9d7e-11ea-8d4b-8769422af490.jpg" target="_blank">
+	<image src="https://user-images.githubusercontent.com/64807615/82740791-9d605e00-9d7e-11ea-8d4b-8769422af490.jpg"; style="width:600px;height:255px;text-align: center;" class="center"></a>
+	<p style="text-align:center"><b>Part 1:</b> Go to Granny’s curry pot 0/1</p>
+	<p style="text-align:center"><b>Part 2:</b> Create delicious Curry Rice 0/1</p>
+<hr>
+<div class="row">
+	<div class="column" style="width:40%"> 
+	<a href="https://user-images.githubusercontent.com/64807615/82740786-9afe0400-9d7e-11ea-9b45-c911353b1268.jpg" target="_blank" style="color:black">
+	<image src="https://user-images.githubusercontent.com/64807615/82740786-9afe0400-9d7e-11ea-9b45-c911353b1268.jpg"; style="width:100%;height:200px;";></a>
+	</div>
+	<div class="column" style="width:60%">
+	<p> Click on the quest to let the auto-navigate feature take you the location at the Land of Rivers. </p>
+	</div>
+</div>
+<hr>
+<div class="row">
+	<div class="column" style="width:40%"> 
+	<a href="https://user-images.githubusercontent.com/64807615/82740787-9b969a80-9d7e-11ea-915e-77cfe62e0591.png" target="_blank" style="color:black">
+	<image src="https://user-images.githubusercontent.com/64807615/82740787-9b969a80-9d7e-11ea-915e-77cfe62e0591.png"; style="width:100%;height:200px;";></a>
+	</div>
+	<div class="column" style="width:60%">
+	<p> Let the auto-navigate finish to turn the quest from <b>“Go to Granny’s curry pot 0/1”</b> to <b>“Create delicious Curry Rice 0/1”.</b></p>
+	</div>
+</div>
+<hr>
+<div class="row">
+	<div class="column" style="width:40%"> 
+	<a href="https://user-images.githubusercontent.com/64807615/82740788-9cc7c780-9d7e-11ea-9c2a-59488a700831.jpg" target="_blank" style="color:black">
+	<image src="https://user-images.githubusercontent.com/64807615/82740788-9cc7c780-9d7e-11ea-9c2a-59488a700831.jpg"; style="width:100%;height:200px;";></a>
+	</div>
+	<div class="column" style="width:60%">
+	<p> Put the ingredients at the 3 rock slabs located near the cooking pot. In any order: bucket of rice, basket of food, and red/yellow curry. </p>
+	</div>
+</div>
+<hr>
+<div class="row">
+	<div class="column" style="width:40%"> 
+	<a href="https://user-images.githubusercontent.com/64807615/82740789-9cc7c780-9d7e-11ea-8bc3-79859acbc090.jpg" target="_blank" style="color:black">
+	<image src="https://user-images.githubusercontent.com/64807615/82740789-9cc7c780-9d7e-11ea-8bc3-79859acbc090.jpg"; style="width:100%;height:200px;";></a>
+	</div>
+	<div class="column" style="width:60%">
+	<p> Once all the ingredients are in place, the cooking pot will boil and after a second a curry will be available for you to eat to finish the quest. </p>
+	<p><b> Note:</b> If red curry doesn’t work, try the yellow curry next.</p>
+	</div>
+</div>
+<hr>
+
+<footer>
+  <p>Footer</p>
+</footer>
+
+</body>
+</html>
