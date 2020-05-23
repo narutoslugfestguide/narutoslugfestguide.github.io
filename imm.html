@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+  <title>Strange Things by the River</title>
+	<script>
+	function includeHTML() {
+	var z, i, elmnt, file, xhttp;
+	/*loop through a collection of all HTML elements:*/
+	z = document.getElementsByTagName("*");
+	for (i = 0; i < z.length; i++) {
+		elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      /*make an HTTP request using the attribute value as the file name:*/
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /*remove the attribute, and call this function once more:*/
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML();
+        }
+      }      
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /*exit the function:*/
+      return;
+    }
+	}
+	};
+	</script>
+</head>
+<body>
+	<div w3-include-html="/navbar.html"></div> 
+	<script>includeHTML();</script>
+
+	<section>
+	<div w3-include-html="/sidebar.html"></div>
+		<article>
+		<h2>Investigation Mysterious Man</h2>
+<hr>
+		<a href="https://user-images.githubusercontent.com/64807615/82741164-f7165780-9d81-11ea-9813-f42046fb211e.jpg" target="_blank" style="color:black">
+		<image src="https://user-images.githubusercontent.com/64807615/82741164-f7165780-9d81-11ea-9813-f42046fb211e.jpg"; style="width:600px;height:250px;";></a>
+		<p>Find Konoha’s Jiraiya</p>
+<hr>
+		<a href="https://user-images.githubusercontent.com/64807615/82741165-f7aeee00-9d81-11ea-9d32-f1fc4b748ca0.jpg" target="_blank" style="color:black">
+		<image src="https://user-images.githubusercontent.com/64807615/82741165-f7aeee00-9d81-11ea-9d32-f1fc4b748ca0.jpg"; style="width:600px;height:250px;";></a>
+		<p>Click on the objective and the auto-navigate feature will lead you to the location.</p>
+<hr>
+		<a href="https://user-images.githubusercontent.com/64807615/82741166-f8478480-9d81-11ea-8779-bcb46d990eae.jpg" target="_blank" style="color:black">
+		<image src="https://user-images.githubusercontent.com/64807615/82741166-f8478480-9d81-11ea-8779-bcb46d990eae.jpg"; style="width:600px;height:250px;";></a>
+		<p>You will enter the scene mode where you will see Jiraiya peeping at a door.</b></p>
+<hr>
+		<a href="https://user-images.githubusercontent.com/64807615/82741167-f8e01b00-9d81-11ea-86b0-bc4a833bb859.jpg" target="_blank" style="color:black">
+		<image src="https://user-images.githubusercontent.com/64807615/82741167-f8e01b00-9d81-11ea-86b0-bc4a833bb859.jpg"; style="width:600px;height:250px;";></a>
+		<p>Open you <br>chat box</br>. Click <br>current</br>. Type <br>“What are you doing?“</br>. Hit <br>send</br>.</p>
+		<p><i>*no quotation marks, capital W*</i></p>
+<hr>			
+
+		<a href="https://user-images.githubusercontent.com/64807615/82741161-f4b3fd80-9d81-11ea-85fd-6e15da74cea4.jpg" target="_blank" style="color:black">
+		<image src="https://user-images.githubusercontent.com/64807615/82741161-f4b3fd80-9d81-11ea-85fd-6e15da74cea4.jpg"; style="width:600px;height:250px;";></a>
+		<p>You will need to drop the fishes into any of the water holes.</p>
+<hr>
+		<a href="https://user-images.githubusercontent.com/64807615/82741163-f67dc100-9d81-11ea-9703-d2026fc029d7.jpg" target="_blank" style="color:black">
+		<image src="https://user-images.githubusercontent.com/64807615/82741163-f67dc100-9d81-11ea-9703-d2026fc029d7.jpg"; style="width:600px;height:250px;";></a>
+		<p>Jiraiya would be startled and you would have completed the quest.</p>
+		</article>
+	</section>
+
+<footer>
+  <p>Footer</p>
+</footer>
+
+</body>
+</html>
