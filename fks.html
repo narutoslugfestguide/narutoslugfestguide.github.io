@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+  <title>Finding Konohamaru Sarutobi</title>
+	<script>
+	function includeHTML() {
+	var z, i, elmnt, file, xhttp;
+	/*loop through a collection of all HTML elements:*/
+	z = document.getElementsByTagName("*");
+	for (i = 0; i < z.length; i++) {
+		elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      /*make an HTTP request using the attribute value as the file name:*/
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /*remove the attribute, and call this function once more:*/
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML();
+        }
+      }      
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /*exit the function:*/
+      return;
+    }
+	}
+	};
+	</script>
+</head>
+<body>
+	<div w3-include-html="/navbar.html"></div> 
+	<script>includeHTML();</script>
+		<h2>Finding Konohamaru Sarutobi</h2>
+<hr>
+		<a href="fksboard" target="_blank">
+		<image src="fksboard"; style="width:600px;height:255px;text-align: center;" class="center"></a>
+		<p style="text-align:center"> Find Konohamaru 0/1</p>
+<hr>
+<h1 style="text-align:center"> Locations </h1>
+		<a href="fksloc" target="_blank">
+		<image src="fksloc"; style="width:600px;height:255px;text-align: center;" class="center"></a>
+
+<hr>
+
+
+<div class="row">
+  <div class="column">
+		<p><b>Location A</b></p>	
+		<a href="https://user-images.githubusercontent.com/64807615/82132033-08a1b180-980e-11ea-8abb-314ee26cc644.jpg" target="_blank" style="color:black">
+		<image src="https://user-images.githubusercontent.com/64807615/82132033-08a1b180-980e-11ea-8abb-314ee26cc644.jpg"; style="width:100%;height:250px;";></a>
+		<p><b>Keywords:</b> Outskirts</p> 
+		<p><b>Location:</b> To the southwest of the border</p>
+  </div>
+
+  <div class="column">
+		<p><b>Location A</b></p>	
+		<a href="https://user-images.githubusercontent.com/64807615/82132039-0b040b80-980e-11ea-88fc-6e9fbf2f4b3d.jpg" target="_blank" style="color:black">
+		<image src="https://user-images.githubusercontent.com/64807615/82132039-0b040b80-980e-11ea-88fc-6e9fbf2f4b3d.jpg"; style="width:100%;height:250px;";></a>
+		<p><b>Keywords:</b> Ruins</p> 
+		<p><b>Location:</b> To the southwest of the border</p>
+  </div>
+
+<hr>
+
+<footer>
+  <p>Footer</p>
+</footer>
+
+</body>
+</html>
